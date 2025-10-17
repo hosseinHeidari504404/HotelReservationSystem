@@ -11,6 +11,6 @@ namespace HotelReservationSystem.Data.Infrastructure.InterfaceRepo
         void Add(Reservation reservation);
         void Update(Reservation reservation);
         void Delete(int id);
-        bool HasConflict(int roomId, DateTime checkIn, DateTime checkOut);
+        bool Tadakhol(int roomId, DateTime checkIn, DateTime checkOut);
     }
 }

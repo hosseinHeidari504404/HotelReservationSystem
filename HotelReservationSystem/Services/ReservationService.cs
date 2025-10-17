@@ -51,8 +51,8 @@ namespace HotelReservationSystem.Services
                 return false;
             }
 
-            bool conflict = _reservationRepository.HasConflict(roomId, checkIn, checkOut);
-            if (conflict)
+            bool tad = _reservationRepository.Tadakhol(roomId,checkIn, checkOut);
+            if (tad)
             {
                 Console.WriteLine("Error: This room is already booked for the selected dates!");
                 return false;

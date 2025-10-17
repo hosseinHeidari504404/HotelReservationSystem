@@ -19,17 +19,6 @@ namespace HotelReservationSystem.Services
         {
             return _roomRepository.GetAll();
         }
-
-        public HotelRoom? GetRoomById(int id)
-        {
-            return _roomRepository.GetById(id);
-        }
-
-        public HotelRoom? GetRoomByNumber(string roomNumber)
-        {
-            return _roomRepository.GetByRoomNumber(roomNumber);
-        }
-
         public bool AddRoom(string roomNumber, int capacity, int pricePerNight, string description, bool hasWifi, bool hasAC)
         {
             var existing = _roomRepository.GetByRoomNumber(roomNumber);

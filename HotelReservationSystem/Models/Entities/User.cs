@@ -13,7 +13,7 @@ namespace HotelReservationSystem.Models.Entities
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }
 

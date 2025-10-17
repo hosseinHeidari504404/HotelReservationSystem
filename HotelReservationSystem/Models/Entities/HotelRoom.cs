@@ -8,7 +8,7 @@
         public int PricePerNight { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public RoomDetail? RoomDetail { get; set; }
-        public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }
 

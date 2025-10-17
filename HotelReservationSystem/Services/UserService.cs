@@ -14,17 +14,6 @@ namespace HotelReservationSystem.Services
         {
             _userRepository = new UserRepository();
         }
-
-        public List<User> GetAllUsers()
-        {
-            return _userRepository.GetAll();
-        }
-
-        public User? GetById(int id)
-        {
-            return _userRepository.GetById(id);
-        }
-
         public User? Login(string username, string password)
         {
             var user = _userRepository.GetByUsername(username);

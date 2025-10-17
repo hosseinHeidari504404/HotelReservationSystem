@@ -68,7 +68,7 @@ namespace HotelReservationSystem.Repositores
             }
         }
 
-        public bool HasConflict(int roomId, DateTime checkIn, DateTime checkOut)
+        public bool Tadakhol(int roomId, DateTime checkIn, DateTime checkOut)
         {
             return _db.Reservations
                 .Any(r => r.RoomId == roomId

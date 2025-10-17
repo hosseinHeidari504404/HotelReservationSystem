@@ -56,23 +56,6 @@ namespace HotelReservationSystem.Data
                       .WithMany(h => h.Reservations)
                       .HasForeignKey(r => r.RoomId);
             });
-
-            //modelBuilder.Entity<User>().HasData(
-            //    new User { Id = 1, Username = "admin", Password = "admin123", Role = UserRole.Admin },
-            //    new User { Id = 2, Username = "reception", Password = "reception123", Role = UserRole.Receptionist },
-            //    new User { Id = 3, Username = "user1", Password = "user123", Role = UserRole.NormalUser }
-            //);
-
-            //modelBuilder.Entity<HotelRoom>().HasData(
-            //    new HotelRoom { Id = 1, RoomNumber = "101", Capacity = 2, PricePerNight = 100 },
-            //    new HotelRoom { Id = 2, RoomNumber = "102", Capacity = 3, PricePerNight = 150 }
-            //);
-
-            //modelBuilder.Entity<RoomDetail>().HasData(
-            //    new RoomDetail { RoomId = 1, Description = "Standard Room", HasWifi = true, HasAirConditioner = true },
-            //    new RoomDetail { RoomId = 2, Description = "Family Room", HasWifi = true, HasAirConditioner = false }
-            //);
-            // SEED DATA
             modelBuilder.Entity<User>().HasData(
                 new User { Id = 1, Username = "admin", Password = "admin123", Role = UserRole.Admin, CreatedAt = new DateTime(2024, 1, 1) },
                 new User { Id = 2, Username = "reception", Password = "reception123", Role = UserRole.Receptionist, CreatedAt = new DateTime(2024, 1, 2) },
