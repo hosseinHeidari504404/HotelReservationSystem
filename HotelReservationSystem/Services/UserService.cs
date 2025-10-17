@@ -17,8 +17,10 @@ namespace HotelReservationSystem.Services
         public User? Login(string username, string password)
         {
             var user = _userRepository.GetByUsername(username);
-            if (user == null) return null;
-
+            if (user == null)
+            {
+                return null;
+            }
             return user.Password == password ? user : null;
         }
 

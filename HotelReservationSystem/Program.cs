@@ -54,7 +54,7 @@ while (running)
                             Console.WriteLine("0️-  Logout");
                             Console.Write("Select: ");
                             var adminChoice = Console.ReadLine();
-
+                            Console.Clear();
                             if (adminChoice == "1")
                             {
                                 Console.Write("Room Number: ");
@@ -69,7 +69,7 @@ while (running)
                                 bool wifi = Console.ReadLine()!.ToLower() == "y";
                                 Console.Write("Has Air Conditioner (y/n): ");
                                 bool ac = Console.ReadLine()!.ToLower() == "y";
-
+                                Console.Clear();
                                 roomService.AddRoom(num, cap, price, desc, wifi, ac);
                             }
                             else if (adminChoice == "2")
@@ -119,7 +119,7 @@ while (running)
                                 DateTime inDate = DateTime.Parse(Console.ReadLine()!);
                                 Console.Write("Check-out (yyyy-MM-dd): ");
                                 DateTime outDate = DateTime.Parse(Console.ReadLine()!);
-
+                                Console.Clear();
                                 reservationService.CreateReservation(uid, rid, inDate, outDate);
                             }
                             else if (recChoice == "2")
@@ -197,6 +197,7 @@ while (running)
             string password = Console.ReadLine()!;
             Console.WriteLine("Select role (1=Admin, 2=Receptionist, 3=NormalUser): ");
             string roleInput = Console.ReadLine()!;
+            Console.Clear();
             UserRole role = roleInput switch
             {
                 "1" => UserRole.Admin,
@@ -221,38 +222,3 @@ while (running)
     }
 }
 
-//class Painter
-//{
-//    public static void Title(string text)
-//    {
-//        Console.ForegroundColor = ConsoleColor.Cyan;
-//        Console.WriteLine($"\n=== {text} ===");
-//        Console.ResetColor();
-//    }
-
-//    public static void Success(string text)
-//    {
-//        Console.ForegroundColor = ConsoleColor.Green;
-//        Console.WriteLine($"✅ {text}");
-//        Console.ResetColor();
-//    }
-
-//    public static void Error(string text)
-//    {
-//        Console.ForegroundColor = ConsoleColor.Red;
-//        Console.WriteLine($"❌ {text}");
-//        Console.ResetColor();
-//    }
-
-//    public static void Info(string text)
-//    {
-//        Console.ForegroundColor = ConsoleColor.Yellow;
-//        Console.WriteLine($"ℹ️  {text}");
-//        Console.ResetColor();
-//    }
-
-//    public static void Line()
-//    {
-//        Console.WriteLine(new string('-', 60));
-//    }
-//}
